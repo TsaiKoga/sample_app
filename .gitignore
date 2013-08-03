@@ -17,3 +17,4 @@
 
 .secret
 # /config/initializers/secret_token.rb
+bundler_stubs/
