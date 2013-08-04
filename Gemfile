@@ -3,14 +3,15 @@ source 'http://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+gem 'bootstrap-sass', '2.3.2.0'			# bootstrap这个gem
 
 group :development, :test do
 	gem 'mysql2'
 	gem 'rspec-rails', '2.13.1'
-  gem 'guard-rspec', '2.5.0' # guard与rspec结合
+  gem 'guard-rspec', '2.5.0'				# guard与rspec结合
   gem 'spork-rails', github: 'railstutorial/spork-rails'
-  gem 'guard-spork', '1.5.0' # spork与guard结合
-  gem 'childprocess', '0.3.9' # 进程池
+  gem 'guard-spork', '1.5.0'				# spork与guard结合
+  gem 'childprocess', '0.3.9'				# 进程池
 end
 
 group :test do
