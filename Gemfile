@@ -7,6 +7,10 @@ gem 'rails', '4.0.0'
 group :development, :test do
 	gem 'mysql2'
 	gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0' # guard与rspec结合
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
+  gem 'guard-spork', '1.5.0' # spork与guard结合
+  gem 'childprocess', '0.3.9' # 进程池
 end
 
 group :test do
