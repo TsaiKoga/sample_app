@@ -33,4 +33,5 @@ SampleApp::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  ActiveModel::SecurePassword.min_cost = true   # 为测试环境下的加密耗时因子条最小
 end
