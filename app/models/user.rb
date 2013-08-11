@@ -6,8 +6,24 @@ class User < ActiveRecord::Base
 										uniqueness: { case_sensitive: false }
 	validates :password, length: { minimum: 6 }
 
-	before_save {self.email = email.downcase}
-
 	has_secure_password				# 强大的密码和密码确认的验证,自动创建password和password_confirmation
+
+	before_save {self.email = email.downcase}
+	before_create :create_remember_token
+
+	# 生成随机的记忆权标
+	def User.new_remember_token
+		SecureRandom.urlsafe_base64
+	end
+
+	# 对记忆权标加密
+	def User.encrypt(token)
+		Digest::SHA1.hexdigest(token.to_s)
+	end
+
+	private
+		def create_remember_token
+			self.remember_token = User.encrypt(User.new_remember_token)
+		end
 
 end
