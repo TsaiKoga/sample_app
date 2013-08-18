@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 gem 'bootstrap-sass', '2.3.2.0'			# bootstrap这个gem
 gem 'bcrypt-ruby', '3.0.1'					# 哈希函数bcrypt对密码进行不可逆加密
 gem 'factory_girl_rails', '4.2.1'   # 生成预构件
+gem 'faker', '1.1.2'								# 使用半真实的名字和email地址创建用户
+gem 'will_paginate', '3.0.4'				# 分页
+gem 'bootstrap-will_paginate', '0.0.9'	# bootstrap的分页
 
 group :development, :test do
 	gem 'mysql2'
